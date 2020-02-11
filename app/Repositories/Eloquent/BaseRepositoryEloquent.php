@@ -86,4 +86,22 @@ abstract class BaseRepositoryEloquent implements RepositoryInterface
 
         return $results;
     }
+
+    /**
+     * Find data by id
+     *
+     * @param       $id
+     * @param array $columns
+     *
+     * @return mixed
+     *
+     * @throws RepositoryException
+     */
+    public function find($id, $columns = ['*'])
+    {
+        $model = $this->model->findOrFail($id, $columns);
+        $this->resetModel();
+
+        return $model;
+    }
 }

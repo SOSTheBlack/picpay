@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers\Users;
 
-use App\Entities\User;
+use App\Http\Resources\UserResource;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 /**
  * Class IndexController
@@ -11,10 +12,13 @@ use App\Entities\User;
  */
 class SearchController extends UsersController
 {
-    public function __invoke()
+    /**
+     * @return AnonymousResourceCollection
+     */
+    public function __invoke(): AnonymousResourceCollection
     {
-        $users =  $this->userRepository->all();
+        $users = $this->userRepository->all();
 
-        return $users;
+        return UserResource::collection($users);
     }
 }
