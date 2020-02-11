@@ -4,7 +4,6 @@ namespace App\Repositories\Eloquent;
 
 use App\Exceptions\Repositories\RepositoryException;
 use App\Repositories\Contracts\RepositoryInterface;
-use App\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Laravel\Lumen\Application;
@@ -77,9 +76,6 @@ abstract class BaseRepositoryEloquent implements RepositoryInterface
      */
     public function all($columns = ['*'])
     {
-        return User::all();
-        echo '<pre>';
-        print_r($this->model);
         if ($this->model instanceof Builder) {
             $results = $this->model->get($columns);
         } else {

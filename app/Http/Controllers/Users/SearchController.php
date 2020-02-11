@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Users;
 
-use App\User;
+use App\Entities\User;
 
 /**
  * Class IndexController

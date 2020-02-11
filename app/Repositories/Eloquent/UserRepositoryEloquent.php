@@ -2,7 +2,7 @@
 
 namespace App\Repositories\Eloquent;
 
-use App\User;
+use App\Entities\User;
 
 /**
  * Class UserRepository

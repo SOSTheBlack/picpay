@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b873d42d-de45-4eac-b6bb-111f758ecd6f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Users/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Users/SearchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepositoryEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepositoryEloquent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquent/UserRepositoryEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/UserRepositoryEloquent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/User.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Users/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="108">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
               <folding>
                 <element signature="e#46#85#0#PHP" expanded="true" />
               </folding>
@@ -29,11 +32,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Users/SearchController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="234">
+              <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Entities/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -41,11 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepositoryEloquent.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
-              <folding>
-                <element signature="e#45#97#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="108">
+              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -54,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/app/Repositories/Eloquent/UserRepositoryEloquent.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -65,7 +74,12 @@
     <findStrings>
       <find>mon</find>
       <find>RepositoryInterface</find>
+      <find>App\User</find>
+      <find>entities</find>
     </findStrings>
+    <replaceStrings>
+      <replace>App\Entities\User</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -93,10 +107,11 @@
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
         <option value="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" />
         <option value="$PROJECT_DIR$/vendor/illuminate/support/helpers.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepositoryEloquent.php" />
         <option value="$PROJECT_DIR$/app/Repositories/Eloquent/UserRepositoryEloquent.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Users/UsersController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Users/SearchController.php" />
+        <option value="$PROJECT_DIR$/app/Entities/User.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepositoryEloquent.php" />
       </list>
     </option>
   </component>
@@ -205,7 +220,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -217,53 +231,6 @@
               <item name="picpay" type="b2602c69:ProjectViewProjectNode" />
               <item name="picpay" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="picpay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="picpay" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="picpay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="picpay" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="picpay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="picpay" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="picpay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="picpay" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Providers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="picpay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="picpay" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Repositories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="picpay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="picpay" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Repositories" type="462c0819:PsiDirectoryNode" />
-              <item name="Contracts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="picpay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="picpay" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Repositories" type="462c0819:PsiDirectoryNode" />
-              <item name="Eloquent" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="picpay" type="b2602c69:ProjectViewProjectNode" />
@@ -290,6 +257,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -298,6 +266,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Entities" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -329,18 +302,19 @@
       <updated>1581349811928</updated>
       <workItem from="1581349813389" duration="3082000" />
       <workItem from="1581368701686" duration="531000" />
-      <workItem from="1581435211697" duration="6020000" />
+      <workItem from="1581435211697" duration="6471000" />
+      <workItem from="1581452709949" duration="207000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9633000" />
+    <option name="totallyTimeSpent" value="10291000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2550586" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25772098" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -353,7 +327,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32970297" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32970297" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -468,13 +442,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Contracts/BaseRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/Contracts/BaseRepository.php" />
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ApiController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -541,23 +509,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Eloquent/UserRepositoryEloquent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepositoryEloquent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
-          <folding>
-            <element signature="e#45#97#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -567,18 +518,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Users/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="108">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="e#46#85#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/Eloquent/UserRepositoryEloquent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Users/SearchController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="234">
+          <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepositoryEloquent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Entities/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
         </state>
       </provider>
     </entry>
