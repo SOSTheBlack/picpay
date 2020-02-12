@@ -18,4 +18,5 @@ $router->get('/', function () use ($router) {
 
 $router->group(['prefix' => '/users', 'namespace' => 'Users'], function() use ($router) {
     $router->get('/', ['as' => 'api.users.search', 'uses' => 'SearchController']);
+    $router->get('/{User}', ['as' => 'api.users.search', 'uses' => 'FindController']);
 });

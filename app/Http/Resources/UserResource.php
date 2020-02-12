@@ -19,12 +19,13 @@ class UserResource extends JsonResource
      * UserResource constructor.
      *
      * @param mixed $resource
+     * @param string  $wrap
      */
-    public function __construct($resource)
+    public function __construct($resource, string $wrap = 'users')
     {
         parent::__construct($resource);
 
-        static::$wrap = '';
+        self::$wrap = $wrap ?? '';
     }
 
     /**
