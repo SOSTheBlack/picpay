@@ -27,6 +27,8 @@ $app->singleton(
     App\Console\Kernel::class
 );
 
+$app->register(App\Providers\AppServiceProvider::class);
+
 $app->configure('app');
 $app->configure('database');
 $app->configure('logging');

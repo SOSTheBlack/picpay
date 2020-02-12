@@ -10,6 +10,13 @@
 | and give it the Closure to call when that URI is requested.
 |
 */
+
+/** @var \Laravel\Lumen\Routing\Router $router */
 $router->get('/', function () use ($router) {
     return $router->app->version();
+});
+
+$router->group(['prefix' => '/users', 'namespace' => 'Users'], function() use ($router) {
+    $router->get('/', ['as' => 'api.users.search', 'uses' => 'SearchController']);
+    $router->get('/{User}', ['as' => 'api.users.search', 'uses' => 'FindController']);
 });
