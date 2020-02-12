@@ -13,6 +13,18 @@ use Illuminate\Http\Resources\Json\JsonResource;
 class UserResource extends JsonResource
 {
     /**
+     * UserResource constructor.
+     *
+     * @param mixed $resource
+     */
+    public function __construct($resource)
+    {
+        parent::__construct($resource);
+
+        static::$wrap = '';
+    }
+
+    /**
      * Transform the resource into an array.
      *
      * @param  Request  $request
@@ -21,8 +33,6 @@ class UserResource extends JsonResource
      */
     public function toArray($request): array
     {
-        static::$wrap = '';
-
         return [
             'id' => $this->id,
             'full_name' => $this->name,
