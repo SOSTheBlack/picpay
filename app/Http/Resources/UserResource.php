@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Entities\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -9,6 +10,8 @@ use Illuminate\Http\Resources\Json\JsonResource;
  * Class User
  *
  * @package App\Http\Resources
+ *
+ * @mixin User
  */
 class UserResource extends JsonResource
 {
@@ -34,14 +37,12 @@ class UserResource extends JsonResource
     public function toArray($request): array
     {
         return [
-            'id' => $this->id,
-            'full_name' => $this->name,
-            'email' => $this->email,
             'cpf' => $this->cpf,
-            'phone_number' => $this->phone_number,
+            'email' => $this->email,
+            'full_name' => $this->name,
+            'id' => $this->id,
             'password' => $this->password,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
+            'phone_number' => $this->phone_number
         ];
     }
 }

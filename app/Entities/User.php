@@ -2,6 +2,8 @@
 
 namespace App\Entities;
 
+use App\Repositories\Eloquent\Scopes\FilterScope;
+use App\Repositories\Eloquent\Scopes\OrderByScope;
 use Illuminate\Auth\Authenticatable;
 use Laravel\Lumen\Auth\Authorizable;
 use Illuminate\Database\Eloquent\Model;
@@ -32,6 +34,10 @@ use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\User whereRememberToken($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\User whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property int $cpf
+ * @property string $phone_number
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\User whereCpf($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\User wherePhoneNumber($value)
  */
 class User extends Model implements AuthenticatableContract, AuthorizableContract
 {
@@ -54,4 +60,17 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     protected $hidden = [
         'password',
     ];
+
+    /**
+     * The "booting" method of the model.
+     *
+     * @return void
+     */
+    protected static function boot()
+    {
+        parent::boot();
+
+        self::addGlobalScope(new FilterScope());
+        self::addGlobalScope(new OrderByScope());
+    }
 }
