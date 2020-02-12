@@ -9,7 +9,7 @@ use App\Http\Resources\UserResource;
  *
  * @package App\Http\Controllers\Users
  */
-class FindController extends UsersController
+class FindController extends UserController
 {
     /**
      * @param int $userId

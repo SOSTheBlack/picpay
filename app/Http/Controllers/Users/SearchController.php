@@ -9,7 +9,7 @@ use App\Http\Resources\UserCollection;
  *
  * @package App\Http\Controllers\Users
  */
-class SearchController extends UsersController
+class SearchController extends UserController
 {
     /**
      * @return UserCollection

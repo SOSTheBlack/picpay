@@ -2,6 +2,8 @@
 
 namespace App\Repositories\Contracts;
 
+use App\Exceptions\Repositories\RepositoryException;
+
 /**
  * Interface RepositoryInterface.
  *
@@ -27,4 +29,15 @@ interface RepositoryInterface
      * @return mixed
      */
     public function find($id, $columns = ['*']);
+
+    /**
+     * Save a new entity in repository
+     *
+     * @param array $attributes
+     *
+     * @throws RepositoryException
+     *
+     * @return mixed
+     */
+    public function create(array $attributes);
 }

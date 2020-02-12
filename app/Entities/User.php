@@ -14,12 +14,12 @@ use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
  * Class User
  *
  * @package App\Entities
- * @property int $id
- * @property string $name
- * @property string $email
- * @property string|null $email_verified_at
- * @property string $password
- * @property string|null $remember_token
+ * @property int                             $id
+ * @property string                          $name
+ * @property string                          $email
+ * @property string|null                     $email_verified_at
+ * @property string                          $password
+ * @property string|null                     $remember_token
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\User newModelQuery()
@@ -34,8 +34,8 @@ use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\User whereRememberToken($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\User whereUpdatedAt($value)
  * @mixin \Eloquent
- * @property int $cpf
- * @property string $phone_number
+ * @property int                             $cpf
+ * @property string                          $phone_number
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\User whereCpf($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\User wherePhoneNumber($value)
  */
@@ -48,9 +48,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email',
-    ];
+    protected $fillable = ['cpf', 'email', 'full_name', 'password', 'phone_number'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -59,6 +57,14 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      */
     protected $hidden = [
         'password',
+    ];
+
+    public $validator = [
+        'cpf' => ['required', 'string'],
+        'email' => ['required', 'string', 'email', 'unique:users'],
+        'full_name' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'phone_number' => ['required', 'string'],
     ];
 
     /**

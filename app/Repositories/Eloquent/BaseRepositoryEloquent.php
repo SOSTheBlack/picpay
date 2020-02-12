@@ -7,6 +7,7 @@ use App\Repositories\Contracts\RepositoryInterface;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Laravel\Lumen\Application;
+use Laravel\Lumen\Routing\ProvidesConvenienceMethods;
 
 /**
  * Class BaseRepository
@@ -15,6 +16,8 @@ use Laravel\Lumen\Application;
  */
 abstract class BaseRepositoryEloquent implements RepositoryInterface
 {
+    use SupportEloquent, ProvidesConvenienceMethods;
+
     /**
      * @var Model
      */
@@ -30,7 +33,7 @@ abstract class BaseRepositoryEloquent implements RepositoryInterface
      *
      * @return string
      */
-    abstract public function model();
+    abstract public function model(): string;
 
     /**
      * @throws RepositoryException
@@ -100,6 +103,35 @@ abstract class BaseRepositoryEloquent implements RepositoryInterface
     public function find($id, $columns = ['*'])
     {
         $model = $this->model->findOrFail($id, $columns);
+        $this->resetModel();
+
+        return $model;
+    }
+
+    /**
+     * Save a new entity in repository
+     *
+     * @param array $attributes
+     *
+     * @throws RepositoryException
+     * @throws \Illuminate\Validation\ValidationException
+     *
+     * @return mixed
+     */
+    public function create(array $attributes)
+    {
+        $this->validate(app('request'), [
+            'cpf' => ['required', 'string', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'unique:users'],
+            'full_name' => ['required', 'string'],
+            'password' => ['required', 'string'],
+            'phone_number' => ['required', 'string'],
+        ]);
+
+        $attributes['password'] = $this->generateHash($attributes['password']);
+
+        $model = $this->model->newInstance($attributes);
+        $model->save();
         $this->resetModel();
 
         return $model;

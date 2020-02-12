@@ -2,7 +2,11 @@
 
 namespace App\Providers;
 
+use App\Repositories\Contracts\ConsumerRepository;
+use App\Repositories\Contracts\SellerRepository;
 use App\Repositories\Contracts\UserRepository;
+use App\Repositories\Eloquent\ConsumerRepositoryEloquent;
+use App\Repositories\Eloquent\SellerRepositoryEloquent;
 use App\Repositories\Eloquent\UserRepositoryEloquent;
 use Illuminate\Support\ServiceProvider;
 
@@ -18,9 +22,11 @@ class RepositoryServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
         $this->app->bind(UserRepository::class, UserRepositoryEloquent::class);
+        $this->app->bind(SellerRepository::class, SellerRepositoryEloquent::class);
+        $this->app->bind(ConsumerRepository::class, ConsumerRepositoryEloquent::class);
     }
 
     /**
@@ -28,7 +34,7 @@ class RepositoryServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
        //
     }

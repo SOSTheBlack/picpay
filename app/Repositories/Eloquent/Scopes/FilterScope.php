@@ -27,7 +27,7 @@ class FilterScope extends BaseScope implements Scope
         if ($model instanceof User && $this->request->has(self::FILTER_KEY)) {
             $filter = $this->request->get(self::FILTER_KEY);
 
-            $builder->where('name', 'like', "{$filter}%");
+            $builder->where('full_name', 'like', "{$filter}%");
         }
     }
 }

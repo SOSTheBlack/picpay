@@ -9,5 +9,5 @@ namespace App\Http\Controllers;
  */
 abstract class ApiController extends Controller
 {
-    abstract protected function initialize(): void;
+
 }
