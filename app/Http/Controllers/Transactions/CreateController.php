@@ -33,7 +33,7 @@ class CreateController extends TransactionController
 
             return new TransactionResource($transaction, '');
         } catch (ClientException $exception) {
-            return response()->json(['code' => 401, 'mesage' => 'Transaction equal to or greater than 100 is not allowed']);
+            return response()->json(['code' => 401, 'mesage' => 'Transaction equal to or greater than 100 is not allowed'], 401);
         }
     }
 }

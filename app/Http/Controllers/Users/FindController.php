@@ -20,6 +20,6 @@ class FindController extends UserController
     {
         $user = $this->userRepository->with(['seller', 'consumer'])->find($userId);
 
-        return new UserResource($user, '');
+        return new UserResource($user, 'users');
     }
 }
