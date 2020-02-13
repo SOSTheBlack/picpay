@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Transactions;
 use App\Exceptions\Repositories\RepositoryException;
 use App\Http\Resources\TransactionResource;
 use Carbon\Carbon;
+use GuzzleHttp\Exception\ClientException;
+use Illuminate\Http\JsonResponse;
 
 /**
  * Class CreateController
@@ -16,16 +18,22 @@ class CreateController extends TransactionController
     /**
      * @return TransactionResource.
      *
-     * @throws RepositoryException
+     * @throws RepositoryException|JsonResponse
      */
-    public function __invoke(): TransactionResource
+    public function __invoke()
     {
-        $attributes = $this->request->only($this->transactionRepository->getFillable());
+        try {
+            $attributes = $this->request->only($this->transactionRepository->getFillable());
 
-        $attributes['transaction_date'] = Carbon::now();
+            $this->transactionService->validTransaction($attributes['value']);
 
-        $transaction = $this->transactionRepository->create($attributes);
+            $attributes['transaction_date'] = Carbon::now();
 
-        return new TransactionResource($transaction, '');
+            $transaction = $this->transactionRepository->create($attributes);
+
+            return new TransactionResource($transaction, '');
+        } catch (ClientException $exception) {
+            return response()->json(['code' => 401, 'mesage' => 'Transaction equal to or greater than 100 is not allowed']);
+        }
     }
 }
