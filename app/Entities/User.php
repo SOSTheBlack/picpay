@@ -38,8 +38,10 @@ use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
  * @property string                          $phone_number
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\User whereCpf($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\User wherePhoneNumber($value)
- * @property string $full_name
+ * @property string                          $full_name
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\User whereFullName($value)
+ * @property-read \App\Entities\Consumer $consumer
+ * @property-read \App\Entities\Seller $seller
  */
 class User extends Model implements AuthenticatableContract, AuthorizableContract
 {
@@ -80,5 +82,15 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
 
         self::addGlobalScope(new FilterScope());
         self::addGlobalScope(new OrderByScope());
+    }
+
+    public function seller()
+    {
+        return $this->hasOne(Seller::class);
+    }
+
+    public function consumer()
+    {
+        return $this->hasOne(Consumer::class);
     }
 }

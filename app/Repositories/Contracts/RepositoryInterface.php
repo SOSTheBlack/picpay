@@ -48,4 +48,13 @@ interface RepositoryInterface
      * @return mixed
      */
     public function create(array $attributes): Model;
+
+    /**
+     * Load relations
+     *
+     * @param array|string $relations
+     *
+     * @return $this
+     */
+    public function with($relations);
 }

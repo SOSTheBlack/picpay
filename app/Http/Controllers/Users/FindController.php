@@ -18,8 +18,8 @@ class FindController extends UserController
      */
     public function __invoke(int $userId): UserResource
     {
-        $user = $this->userRepository->find($userId);
+        $user = $this->userRepository->with(['seller', 'consumer'])->find($userId);
 
-        return new UserResource($user);
+        return new UserResource($user, '');
     }
 }

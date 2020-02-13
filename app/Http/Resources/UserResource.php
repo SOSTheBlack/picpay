@@ -43,6 +43,20 @@ class UserResource extends JsonResource
     public function toArray($request): array
     {
         return [
+            'accounts' => [
+                'consumer' => new ConsumerResource($this->consumer, ''),
+                'seller' => new SellerResource($this->seller, '')
+            ],
+            self::WRAP => $this->getStructureUser(),
+        ];
+    }
+
+    /**
+     * @return array
+     */
+    private function getStructureUser(): array
+    {
+        return [
             'cpf' => $this->cpf,
             'email' => $this->email,
             'full_name' => $this->name,

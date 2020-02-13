@@ -135,4 +135,18 @@ abstract class BaseRepositoryEloquent implements RepositoryInterface
 
         return $model;
     }
+
+    /**
+     * Load relations
+     *
+     * @param array|string $relations
+     *
+     * @return $this
+     */
+    public function with($relations)
+    {
+        $this->model = $this->model->with($relations);
+
+        return $this;
+    }
 }
