@@ -5,6 +5,7 @@ namespace App\Entities;
 use App\Repositories\Eloquent\Scopes\FilterScope;
 use App\Repositories\Eloquent\Scopes\OrderByScope;
 use Illuminate\Auth\Authenticatable;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Laravel\Lumen\Auth\Authorizable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
@@ -40,8 +41,8 @@ use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\User wherePhoneNumber($value)
  * @property string                          $full_name
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\User whereFullName($value)
- * @property-read \App\Entities\Consumer $consumer
- * @property-read \App\Entities\Seller $seller
+ * @property-read \App\Entities\Consumer     $consumer
+ * @property-read \App\Entities\Seller       $seller
  */
 class User extends Model implements AuthenticatableContract, AuthorizableContract
 {
@@ -63,14 +64,6 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
         'password',
     ];
 
-    public $validator = [
-        'cpf' => ['required', 'string'],
-        'email' => ['required', 'string', 'email', 'unique:users'],
-        'full_name' => ['required', 'string'],
-        'password' => ['required', 'string'],
-        'phone_number' => ['required', 'string'],
-    ];
-
     /**
      * The "booting" method of the model.
      *
@@ -84,12 +77,22 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
         self::addGlobalScope(new OrderByScope());
     }
 
-    public function seller()
+    /**
+     * Define a one-to-one relationship.
+     *
+     * @return HasOne
+     */
+    public function seller(): HasOne
     {
         return $this->hasOne(Seller::class);
     }
 
-    public function consumer()
+    /**
+     * Define a one-to-one relationship.
+     *
+     * @return HasOne
+     */
+    public function consumer(): HasOne
     {
         return $this->hasOne(Consumer::class);
     }

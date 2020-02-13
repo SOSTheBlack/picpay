@@ -3,6 +3,7 @@
 namespace App\Entities;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * Class Cosumer.
@@ -28,6 +29,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Seller whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\Seller whereUsername($value)
  * @mixin \Eloquent
+ * @property-read \App\Entities\User $user
  */
 class Seller extends Model
 {
@@ -37,4 +39,14 @@ class Seller extends Model
      * @var array
      */
     protected $fillable = ['cnpj', 'fantasy_name', 'social_name', 'user_id', 'username'];
+
+    /**
+     * Define an inverse one-to-one or many relationship.
+     *
+     * @return BelongsTo
+     */
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
 }

@@ -23,4 +23,8 @@ $router->group(['prefix' => '/users', 'namespace' => 'Users'], function() use ($
 
     $router->post('/consumers', ['as', 'api.users.consumers.create', 'uses' => 'Consumers\CreateController']);
     $router->post('/sellers', ['as', 'api.users.sellers.create', 'uses' => 'Sellers\CreateController']);
+
+
 });
+
+$router->post('/transactions', ['as' => 'api.transactions.create', 'uses' => 'Transactions\CreateController']);
