@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Users;
 
 use Illuminate\Http\Request;
+use App\Http\Resources\UserResource;
 
 /**
  * Class CreateController.
@@ -14,12 +15,14 @@ class CreateController extends UserController
     /**
      * @param Request $request
      *
-     * @return void
+     * @return UserResource
      *
      * @throws \App\Exceptions\Repositories\RepositoryException
      */
-    public function __invoke(Request $request)
+    public function __invoke(Request $request): UserResource
     {
-        $this->userRepository->create($request->all());
+        $user = $this->userRepository->create($request->all());
+
+        return (new UserResource($user, ''));
     }
 }
