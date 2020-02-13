@@ -10,7 +10,7 @@ use App\Repositories\Contracts\UserRepository;
  *
  * @package App\Http\Controllers\Users
  */
-abstract class UsersController extends ApiController
+abstract class UserController extends ApiController
 {
     /**
      * @var UserRepository
@@ -22,14 +22,8 @@ abstract class UsersController extends ApiController
      */
     public function __construct()
     {
-        $this->initialize();
-    }
+        parent::__construct();
 
-    /**
-     *
-     */
-    protected function initialize(): void
-    {
         $this->userRepository = app(UserRepository::class);
     }
 }

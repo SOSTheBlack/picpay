@@ -23,6 +23,6 @@ class OrderByScope extends BaseScope implements Scope
      */
     public function apply(Builder $builder, Model $model)
     {
-        $builder->orderBy('name');
+        $builder->orderBy('full_name');
     }
 }

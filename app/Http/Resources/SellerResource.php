@@ -2,7 +2,7 @@
 
 namespace App\Http\Resources;
 
-use App\Entities\User;
+use App\Entities\Seller;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -11,14 +11,14 @@ use Illuminate\Http\Resources\Json\JsonResource;
  *
  * @package App\Http\Resources
  *
- * @mixin User
+ * @mixin Seller
  */
-class UserResource extends JsonResource
+class SellerResource extends JsonResource
 {
     /**
      * @const string
      */
-    private const WRAP = 'users';
+    private const WRAP = 'sellers';
 
     /**
      * UserResource constructor.
@@ -43,26 +43,12 @@ class UserResource extends JsonResource
     public function toArray($request): array
     {
         return [
-            'accounts' => [
-                'consumer' => new ConsumerResource($this->consumer, ''),
-                'seller' => new SellerResource($this->seller, '')
-            ],
-            self::WRAP => $this->getStructureUser(),
-        ];
-    }
-
-    /**
-     * @return array
-     */
-    private function getStructureUser(): array
-    {
-        return [
-            'cpf' => $this->cpf,
-            'email' => $this->email,
-            'full_name' => $this->name,
+            'cnpj' => $this->cnpj,
+            'fantasy_name' => $this->fantasy_name,
             'id' => $this->id,
-            'password' => $this->password,
-            'phone_number' => $this->phone_number
+            'social_name' => $this->social_name,
+            'user_id' => $this->user_id,
+            'username' => $this->username,
         ];
     }
 }

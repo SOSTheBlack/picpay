@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+
 /**
  * Class ApiController
  *
@@ -9,5 +11,24 @@ namespace App\Http\Controllers;
  */
 abstract class ApiController extends Controller
 {
-    abstract protected function initialize(): void;
+    /**
+     * @var Request
+     */
+    protected $request;
+
+    /**
+     * ApiController constructor.
+     */
+    public function __construct()
+    {
+        $this->makeRequest();
+    }
+
+    /**
+     * Initializa request.
+     */
+    private function makeRequest(): void
+    {
+        $this->request = app('request');
+    }
 }

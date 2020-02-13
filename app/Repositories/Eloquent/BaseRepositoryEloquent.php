@@ -7,6 +7,7 @@ use App\Repositories\Contracts\RepositoryInterface;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Laravel\Lumen\Application;
+use Laravel\Lumen\Routing\ProvidesConvenienceMethods;
 
 /**
  * Class BaseRepository
@@ -15,6 +16,8 @@ use Laravel\Lumen\Application;
  */
 abstract class BaseRepositoryEloquent implements RepositoryInterface
 {
+    use SupportEloquent, ProvidesConvenienceMethods;
+
     /**
      * @var Model
      */
@@ -30,7 +33,7 @@ abstract class BaseRepositoryEloquent implements RepositoryInterface
      *
      * @return string
      */
-    abstract public function model();
+    abstract public function model(): string;
 
     /**
      * @throws RepositoryException
@@ -55,6 +58,16 @@ abstract class BaseRepositoryEloquent implements RepositoryInterface
         }
 
         return $this->model = $model;
+    }
+
+    /**
+     * Get the fillable attributes for the model.
+     *
+     * @return array
+     */
+    public function getFillable(): array
+    {
+        return $this->model->getFillable();
     }
 
     /**
@@ -103,5 +116,37 @@ abstract class BaseRepositoryEloquent implements RepositoryInterface
         $this->resetModel();
 
         return $model;
+    }
+
+    /**
+     * Save a new entity in repository
+     *
+     * @param array $attributes
+     *
+     * @return mixed
+     *
+     * @throws RepositoryException
+     */
+    public function create(array $attributes): Model
+    {
+        $model = $this->model->newInstance($attributes);
+        $model->save();
+        $this->resetModel();
+
+        return $model;
+    }
+
+    /**
+     * Load relations
+     *
+     * @param array|string $relations
+     *
+     * @return $this
+     */
+    public function with($relations)
+    {
+        $this->model = $this->model->with($relations);
+
+        return $this;
     }
 }

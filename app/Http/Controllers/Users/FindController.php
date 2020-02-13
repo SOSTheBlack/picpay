@@ -9,7 +9,7 @@ use App\Http\Resources\UserResource;
  *
  * @package App\Http\Controllers\Users
  */
-class FindController extends UsersController
+class FindController extends UserController
 {
     /**
      * @param int $userId
@@ -18,8 +18,8 @@ class FindController extends UsersController
      */
     public function __invoke(int $userId): UserResource
     {
-        $user = $this->userRepository->find($userId);
+        $user = $this->userRepository->with(['seller', 'consumer'])->find($userId);
 
-        return new UserResource($user);
+        return new UserResource($user, '');
     }
 }

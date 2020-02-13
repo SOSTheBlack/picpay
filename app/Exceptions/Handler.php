@@ -28,7 +28,8 @@ class Handler extends ExceptionHandler
      *
      * This is a great spot to send exceptions to Sentry, Bugsnag, etc.
      *
-     * @param  \Exception  $exception
+     * @param  \Exception $exception
+     *
      * @return void
      */
     public function report(Exception $exception)
@@ -39,12 +40,32 @@ class Handler extends ExceptionHandler
     /**
      * Render an exception into an HTTP response.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Exception  $exception
+     * @param  \Illuminate\Http\Request $request
+     * @param  \Exception               $exception
+     *
      * @return \Illuminate\Http\Response|\Illuminate\Http\JsonResponse
      */
     public function render($request, Exception $exception)
     {
+        if ($exception instanceof ValidationException) {
+            $statusCode = $exception->getResponse()->getStatusCode();
+            $jsonResponse = [
+                'code' => (string) $statusCode,
+                'message' => $exception->getMessage()
+            ];
+
+            if (env('APP_DEBUG', false) === true) {
+                $jsonResponse['debug'] = $exception->errors();
+            }
+
+            return response()->json($jsonResponse)->setStatusCode($statusCode);
+        }
+
+        return response()->json([
+            'code' => "500",
+            'message' => $exception->getMessage()
+        ])->setStatusCode(500);
+
         return parent::render($request, $exception);
     }
 }

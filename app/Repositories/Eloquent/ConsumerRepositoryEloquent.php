@@ -2,17 +2,18 @@
 
 namespace App\Repositories\Eloquent;
 
-use App\Entities\User;
+use App\Entities\Consumer;
 use App\Exceptions\Repositories\RepositoryException;
-use Illuminate\Validation\ValidationException;
+use App\Repositories\Contracts\ConsumerRepository;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Validation\ValidationException;
 
 /**
- * Class UserRepository
+ * Class ConsumerRepositoryEloquent.
  *
  * @package App\Repositories\Eloquent
  */
-class UserRepositoryEloquent extends BaseRepositoryEloquent
+class ConsumerRepositoryEloquent extends BaseRepositoryEloquent implements ConsumerRepository
 {
     /**
      * Specify Model class name.
@@ -21,7 +22,7 @@ class UserRepositoryEloquent extends BaseRepositoryEloquent
      */
     public function model(): string
     {
-        return User::class;
+        return Consumer::class;
     }
 
     /**
@@ -37,14 +38,9 @@ class UserRepositoryEloquent extends BaseRepositoryEloquent
     public function create(array $attributes): Model
     {
         $this->validate(app('request'), [
-            'cpf' => ['required', 'string', 'unique:users'],
-            'email' => ['required', 'string', 'email', 'unique:users'],
-            'full_name' => ['required', 'string'],
-            'password' => ['required', 'string'],
-            'phone_number' => ['required', 'string'],
+            'user_id' => ['required', 'integer', 'unique:consumers', 'exists:users,id'],
+            'username' => ['required', 'string', 'unique:consumers', 'unique:sellers'],
         ]);
-
-        $attributes['password'] = $this->generateHash($attributes['password']);
 
         return parent::create($attributes);
     }
