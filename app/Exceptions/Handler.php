@@ -9,6 +9,11 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Laravel\Lumen\Exceptions\Handler as ExceptionHandler;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
+/**
+ * Class Handler.
+ *
+ * @package App\Exceptions
+ */
 class Handler extends ExceptionHandler
 {
     /**
@@ -31,6 +36,7 @@ class Handler extends ExceptionHandler
      * @param  \Exception $exception
      *
      * @return void
+     * @throws Exception
      */
     public function report(Exception $exception)
     {
@@ -60,11 +66,6 @@ class Handler extends ExceptionHandler
 
             return response()->json($jsonResponse)->setStatusCode($statusCode);
         }
-
-        return response()->json([
-            'code' => "500",
-            'message' => $exception->getMessage()
-        ])->setStatusCode(500);
 
         return parent::render($request, $exception);
     }

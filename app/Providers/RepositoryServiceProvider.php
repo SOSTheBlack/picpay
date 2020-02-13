@@ -4,9 +4,11 @@ namespace App\Providers;
 
 use App\Repositories\Contracts\ConsumerRepository;
 use App\Repositories\Contracts\SellerRepository;
+use App\Repositories\Contracts\TransactionRepository;
 use App\Repositories\Contracts\UserRepository;
 use App\Repositories\Eloquent\ConsumerRepositoryEloquent;
 use App\Repositories\Eloquent\SellerRepositoryEloquent;
+use App\Repositories\Eloquent\TransactionRepositoryEloquent;
 use App\Repositories\Eloquent\UserRepositoryEloquent;
 use Illuminate\Support\ServiceProvider;
 
@@ -27,6 +29,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(UserRepository::class, UserRepositoryEloquent::class);
         $this->app->bind(SellerRepository::class, SellerRepositoryEloquent::class);
         $this->app->bind(ConsumerRepository::class, ConsumerRepositoryEloquent::class);
+        $this->app->bind(TransactionRepository::class, TransactionRepositoryEloquent::class);
     }
 
     /**

@@ -17,17 +17,23 @@ class FilterScope extends BaseScope implements Scope
     /**
      * Apply the scope to a given Eloquent query builder.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder $builder
-     * @param  \Illuminate\Database\Eloquent\Model   $model
+     * @param  Builder $builder
+     * @param  Model   $model
      *
      * @return void
      */
-    public function apply(Builder $builder, Model $model)
+    public function apply(Builder $builder, Model $model): void
     {
-        if ($model instanceof User && $this->request->has(self::FILTER_KEY)) {
+        if ($this->request->has(self::FILTER_KEY) || $model instanceof User) {
             $filter = $this->request->get(self::FILTER_KEY);
 
-            $builder->where('full_name', 'like', "{$filter}%");
+            $builder
+                ->Where('full_name', 'like', "{$filter}%")
+                ->orWhereHas('consumer', function(Builder $builder) use ($filter) {
+                    $builder->where('username', 'like', "{$filter}%");
+                })->orWhereHas('seller', function(Builder $builder) use ($filter) {
+                    $builder->where('username', 'like', "{$filter}%");
+                });
         }
     }
 }
