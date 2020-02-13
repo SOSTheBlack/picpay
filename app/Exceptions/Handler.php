@@ -61,6 +61,11 @@ class Handler extends ExceptionHandler
             return response()->json($jsonResponse)->setStatusCode($statusCode);
         }
 
+        return response()->json([
+            'code' => "500",
+            'message' => $exception->getMessage()
+        ])->setStatusCode(500);
+
         return parent::render($request, $exception);
     }
 }

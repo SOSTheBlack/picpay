@@ -15,7 +15,7 @@ class ConsumerController extends UserController
     /**
      * @var ConsumerRepository
      */
-    private $consumerRepository;
+    protected $consumerRepository;
 
     /**
      * ConsumerController constructor.

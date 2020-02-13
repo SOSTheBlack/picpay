@@ -20,5 +20,7 @@ $router->group(['prefix' => '/users', 'namespace' => 'Users'], function() use ($
     $router->get('/', ['as' => 'api.users.search', 'uses' => 'SearchController']);
     $router->post('/', ['as' => 'api.users.create', 'uses' => 'CreateController']);
     $router->get('/{User}', ['as' => 'api.users.search', 'uses' => 'FindController']);
-    $router->post('/users/consumers', ['as', 'api.users.consumers.create', 'uses' => 'Consumer/CreateController']);
+
+    $router->post('/consumers', ['as', 'api.users.consumers.create', 'uses' => 'Consumers\CreateController']);
+//    $router->post('/users/sellers', ['as', 'api.users.sellers.create', 'uses' => 'Seller/CreateController']);
 });

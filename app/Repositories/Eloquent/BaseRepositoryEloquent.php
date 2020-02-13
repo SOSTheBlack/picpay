@@ -113,23 +113,12 @@ abstract class BaseRepositoryEloquent implements RepositoryInterface
      *
      * @param array $attributes
      *
-     * @throws RepositoryException
-     * @throws \Illuminate\Validation\ValidationException
-     *
      * @return mixed
+     *
+     * @throws RepositoryException
      */
-    public function create(array $attributes)
+    public function create(array $attributes): Model
     {
-        $this->validate(app('request'), [
-            'cpf' => ['required', 'string', 'unique:users'],
-            'email' => ['required', 'string', 'email', 'unique:users'],
-            'full_name' => ['required', 'string'],
-            'password' => ['required', 'string'],
-            'phone_number' => ['required', 'string'],
-        ]);
-
-        $attributes['password'] = $this->generateHash($attributes['password']);
-
         $model = $this->model->newInstance($attributes);
         $model->save();
         $this->resetModel();

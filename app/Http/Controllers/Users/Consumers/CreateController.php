@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers\Users\Consumers;
 
+use App\Http\Resources\ConsumerResource;
+use Illuminate\Http\Request;
+
 /**
  * Class CreateController
  *
@@ -9,8 +12,10 @@ namespace App\Http\Controllers\Users\Consumers;
  */
 class CreateController extends ConsumerController
 {
-    public function __invoke()
+    public function __invoke(Request $request)
     {
-        // TODO: Implement __invoke() method.
+        $consumer = $this->consumerRepository->create($request->all());
+
+        return new ConsumerResource($consumer, '');
     }
 }

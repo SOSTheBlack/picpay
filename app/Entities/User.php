@@ -38,6 +38,8 @@ use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
  * @property string                          $phone_number
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\User whereCpf($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\User wherePhoneNumber($value)
+ * @property string $full_name
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Entities\User whereFullName($value)
  */
 class User extends Model implements AuthenticatableContract, AuthorizableContract
 {

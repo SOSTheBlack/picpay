@@ -3,6 +3,7 @@
 namespace App\Repositories\Contracts;
 
 use App\Exceptions\Repositories\RepositoryException;
+use Illuminate\Database\Eloquent\Model;
 
 /**
  * Interface RepositoryInterface.
@@ -39,5 +40,5 @@ interface RepositoryInterface
      *
      * @return mixed
      */
-    public function create(array $attributes);
+    public function create(array $attributes): Model;
 }
