@@ -28,3 +28,4 @@ $router->group(['prefix' => '/users', 'namespace' => 'Users'], function() use ($
 });
 
 $router->post('/transactions', ['as' => 'api.transactions.create', 'uses' => 'Transactions\CreateController']);
+$router->get('/transactions/{transactionId}', ['as' => 'api.transactions.find', 'uses' => 'Transactions\FindController']);
