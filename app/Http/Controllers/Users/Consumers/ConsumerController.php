@@ -10,7 +10,7 @@ use App\Repositories\Contracts\ConsumerRepository;
  *
  * @package App\Http\Controllers\Users\Consumers
  */
-class ConsumerController extends UserController
+abstract class ConsumerController extends UserController
 {
     /**
      * @var ConsumerRepository

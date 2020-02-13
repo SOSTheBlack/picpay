@@ -31,5 +31,10 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Seller extends Model
 {
-
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['cnpj', 'fantasy_name', 'social_name', 'user_id', 'username'];
 }

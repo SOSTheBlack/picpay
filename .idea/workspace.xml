@@ -3,18 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="b873d42d-de45-4eac-b6bb-111f758ecd6f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/Consumer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/Consumer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Entities/Seller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/Seller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Users/Consumers/ConsumerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Users/Consumers/ConsumerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Users/Consumers/CreateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Users/Consumers/CreateController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Users/CreateUserRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Users/CreateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Users/CreateController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Users/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Users/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Users/Consumers/CreateConsumerRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Users/Consumers/CreateSellerRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/ConsumerCollection.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/ConsumerCollection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/Contracts/RepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Contracts/RepositoryInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepositoryEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepositoryEloquent.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquent/ConsumerRepositoryEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/ConsumerRepositoryEloquent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquent/UserRepositoryEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/UserRepositoryEloquent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquent/SellerRepositoryEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/SellerRepositoryEloquent.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,66 +31,33 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Http/Resources/ConsumerResource.php">
+            <entry file="file://$PROJECT_DIR$/app/Repositories/Eloquent/SellerRepositoryEloquent.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-82">
-                  <caret line="17" selection-start-line="17" selection-end-line="20" selection-end-column="37" />
+                <state relative-caret-position="315">
+                  <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
                   <folding>
-                    <element signature="e#38#60#0#PHP" expanded="true" />
+                    <element signature="e#45#69#0#PHP" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Http/Resources/UserResource.php">
+            <entry file="file://$PROJECT_DIR$/app/Http/Resources/SellerResource.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="154">
-                  <caret line="32" column="14" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="14" />
-                  <folding>
-                    <element signature="e#38#60#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Exceptions/Handler.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="525">
-                  <caret line="66" column="31" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
+                <state relative-caret-position="427">
+                  <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/Repositories/Eloquent/ConsumerRepositoryEloquent.php">
+            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Users/Sellers/CreateController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="385">
-                  <caret line="39" column="41" lean-forward="true" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
+                <state relative-caret-position="324">
+                  <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
                   <folding>
-                    <element signature="e#45#71#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Entities/Consumer.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="17" column="85" selection-start-line="17" selection-start-column="85" selection-end-line="17" selection-end-column="85" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Users/Consumers/CreateController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-                  <folding>
-                    <element signature="e#56#96#0#PHP" expanded="true" />
+                    <element signature="e#54#106#0#PHP" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -101,36 +68,36 @@
       <split-second>
         <leaf>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Users/CreateController.php">
+            <entry file="file://$PROJECT_DIR$/app/Repositories/Eloquent/UserRepositoryEloquent.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="342">
-                  <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+                <state relative-caret-position="117">
+                  <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
                   <folding>
-                    <element signature="e#46#74#0#PHP" expanded="true" />
+                    <element signature="e#45#67#0#PHP" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Http/Resources/UserResource.php">
+            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Users/CreateController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="154">
-                  <caret line="32" column="14" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="14" />
+                <state relative-caret-position="414">
+                  <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
                   <folding>
-                    <element signature="e#38#60#0#PHP" expanded="true" />
+                    <element signature="e#46#98#0#PHP" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/Repositories/Eloquent/UserRepositoryEloquent.php">
+            <entry file="file://$PROJECT_DIR$/app/Repositories/Eloquent/ConsumerRepositoryEloquent.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="324">
-                  <caret line="40" column="24" lean-forward="true" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+                <state relative-caret-position="720">
+                  <caret line="40" column="56" lean-forward="true" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
                   <folding>
-                    <element signature="e#45#67#0#PHP" expanded="true" />
+                    <element signature="e#45#71#0#PHP" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -158,10 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Exceptions/Repositories/RepositoryException.php" />
-        <option value="$PROJECT_DIR$/app/Providers/RepositoryException.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepository.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Contracts/BaseRepository.php" />
         <option value="$PROJECT_DIR$/bootstrap/app.php" />
         <option value="$PROJECT_DIR$/vendor/illuminate/support/helpers.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Users/UsersController.php" />
@@ -179,13 +142,9 @@
         <option value="$PROJECT_DIR$/app/Entities/Cosumer.php" />
         <option value="$PROJECT_DIR$/app/Repositories/Contracts/CosumerRepository.php" />
         <option value="$PROJECT_DIR$/app/Repositories/Contracts/ConsumerRepository.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Users/UserController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_02_12_204939_create_consumer_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_02_12_212327_create_seller_table.php" />
         <option value="$PROJECT_DIR$/app/Repositories/Contracts/SellerRepository.php" />
-        <option value="$PROJECT_DIR$/app/Entities/Seller.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Eloquent/SellerRepositoryEloquent.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Users/Consumers/CreateConsumerRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Users/Consumers/CreateSellerRequest.php" />
         <option value="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" />
@@ -197,18 +156,26 @@
         <option value="$PROJECT_DIR$/app/Repositories/Contracts/UserRepository.php" />
         <option value="$PROJECT_DIR$/app/Repositories/Eloquent/Scopes/FilterScope.php" />
         <option value="$PROJECT_DIR$/app/Repositories/Eloquent/Scopes/OrderByScope.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Users/CreateController.php" />
-        <option value="$PROJECT_DIR$/routes/api.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Users/Consumers/ConsumerController.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Eloquent/UserRepositoryEloquent.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Contracts/RepositoryInterface.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepositoryEloquent.php" />
-        <option value="$PROJECT_DIR$/app/Http/Resources/ConsumerResource.php" />
         <option value="$PROJECT_DIR$/app/Http/Resources/UserResource.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Users/Consumers/CreateController.php" />
         <option value="$PROJECT_DIR$/app/Entities/Consumer.php" />
         <option value="$PROJECT_DIR$/app/Exceptions/Handler.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Users/Consumers/ConsumerController.php" />
+        <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/app/Entities/Seller.php" />
         <option value="$PROJECT_DIR$/app/Repositories/Eloquent/ConsumerRepositoryEloquent.php" />
+        <option value="$PROJECT_DIR$/app/Http/Resources/ConsumerCollection.php" />
+        <option value="$PROJECT_DIR$/app/Http/Resources/ConsumerResource.php" />
+        <option value="$PROJECT_DIR$/app/Http/Resources/SellerResource.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/Eloquent/UserRepositoryEloquent.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepositoryEloquent.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/Contracts/RepositoryInterface.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Users/UserController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Users/CreateController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Users/Sellers/SellerController.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/Eloquent/SellerRepositoryEloquent.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Users/Sellers/CreateController.php" />
       </list>
     </option>
   </component>
@@ -371,15 +338,18 @@
               <item name="picpay" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="Users" type="462c0819:PsiDirectoryNode" />
+              <item name="Consumers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="picpay" type="b2602c69:ProjectViewProjectNode" />
               <item name="picpay" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
               <item name="Users" type="462c0819:PsiDirectoryNode" />
+              <item name="Sellers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="picpay" type="b2602c69:ProjectViewProjectNode" />
@@ -486,18 +456,18 @@
       <workItem from="1581452709949" duration="1332000" />
       <workItem from="1581454323655" duration="738000" />
       <workItem from="1581522468111" duration="5116000" />
-      <workItem from="1581539595253" duration="10319000" />
+      <workItem from="1581539595253" duration="14337000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27589000" />
+    <option name="totallyTimeSpent" value="31607000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17358893" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14643237" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -510,7 +480,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32970297" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.25940594" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -521,47 +491,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Repositories/Eloquent/UserRepositoryEloquent.php</url>
-          <line>40</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bootstrap/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="15" lean-forward="true" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/illuminate/support/Debug/Dumper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/illuminate/support/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="556" column="28" lean-forward="true" selection-start-line="556" selection-start-column="28" selection-end-line="556" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Scopes/FilterScope.php" />
     <entry file="file://$PROJECT_DIR$/app/Repositories/Eloquent/Scopes/BaseScope.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -611,23 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ApiController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Users/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="29" />
-          <folding>
-            <element signature="e#46#85#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/illuminate/http/Request.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -659,27 +572,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Entities/Seller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Eloquent/SellerRepositoryEloquent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Users/Consumers/CreateSellerRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -798,36 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepositoryEloquent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="113" column="31" lean-forward="true" selection-start-line="113" selection-start-column="31" selection-end-line="113" selection-end-column="31" />
-          <folding>
-            <element signature="e#45#97#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Contracts/RepositoryInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-          <folding>
-            <element signature="e#46#98#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Users/Consumers/ConsumerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-          <folding>
-            <element signature="e#56#102#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Requests/Users/CreateUserRequest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="490">
@@ -848,23 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="23" column="90" selection-start-line="23" selection-start-column="90" selection-end-line="23" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Users/CreateController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding>
-            <element signature="e#46#74#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Repositories/Contracts/ConsumerRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -876,16 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="33" column="9" lean-forward="true" selection-start-line="30" selection-start-column="15" selection-end-line="33" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Resources/ConsumerResource.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-82">
-          <caret line="17" selection-start-line="17" selection-end-line="20" selection-end-column="37" />
-          <folding>
-            <element signature="e#38#60#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -906,16 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Eloquent/UserRepositoryEloquent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="40" column="24" lean-forward="true" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
-          <folding>
-            <element signature="e#45#67#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Resources/UserResource.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -926,19 +751,165 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Users/Consumers/ConsumerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <folding>
+            <element signature="e#56#102#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Exceptions/Handler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
+        <state relative-caret-position="765">
           <caret line="66" column="31" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="21" column="85" selection-start-line="21" selection-start-column="85" selection-end-line="21" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Entities/Seller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Users/Consumers/CreateSellerRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="36" column="9" selection-start-line="30" selection-start-column="15" selection-end-line="36" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/illuminate/database/Eloquent/Concerns/GuardsAttributes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="29" selection-start-line="29" selection-end-line="33" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/Contracts/RepositoryInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding>
+            <element signature="e#46#98#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Users/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+          <folding>
+            <element signature="e#46#85#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepositoryEloquent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="120" column="7" lean-forward="true" selection-start-line="120" selection-start-column="7" selection-end-line="120" selection-end-column="7" />
+          <folding>
+            <element signature="e#45#97#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Resources/ConsumerResource.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="27" selection-start-line="27" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Resources/ConsumerCollection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/Eloquent/UserRepositoryEloquent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding>
+            <element signature="e#45#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Users/Sellers/SellerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding>
+            <element signature="e#54#100#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Users/CreateController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+          <folding>
+            <element signature="e#46#98#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Repositories/Eloquent/ConsumerRepositoryEloquent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="39" column="41" lean-forward="true" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
+        <state relative-caret-position="720">
+          <caret line="40" column="56" lean-forward="true" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
           <folding>
             <element signature="e#45#71#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/Eloquent/SellerRepositoryEloquent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding>
+            <element signature="e#45#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Resources/SellerResource.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Users/Sellers/CreateController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding>
+            <element signature="e#54#106#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

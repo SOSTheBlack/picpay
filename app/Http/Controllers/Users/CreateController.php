@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Users;
 
-use Illuminate\Http\Request;
+use App\Exceptions\Repositories\RepositoryException;
 use App\Http\Resources\UserResource;
 
 /**
@@ -13,15 +13,15 @@ use App\Http\Resources\UserResource;
 class CreateController extends UserController
 {
     /**
-     * @param Request $request
-     *
      * @return UserResource
      *
-     * @throws \App\Exceptions\Repositories\RepositoryException
+     * @throws RepositoryException
      */
-    public function __invoke(Request $request): UserResource
+    public function __invoke(): UserResource
     {
-        $user = $this->userRepository->create($request->all());
+        $attributes = $this->request->only($this->userRepository->getFillable());
+
+        $user = $this->userRepository->create($attributes);
 
         return (new UserResource($user, ''));
     }

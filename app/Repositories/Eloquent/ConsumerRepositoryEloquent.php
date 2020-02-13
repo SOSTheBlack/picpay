@@ -38,7 +38,7 @@ class ConsumerRepositoryEloquent extends BaseRepositoryEloquent implements Consu
     public function create(array $attributes): Model
     {
         $this->validate(app('request'), [
-            'user_id' => ['required', 'integer', 'unique:consumers'],
+            'user_id' => ['required', 'integer', 'unique:consumers', 'exists:users,id'],
             'username' => ['required', 'string', 'unique:consumers', 'unique:sellers'],
         ]);
 

@@ -22,5 +22,5 @@ $router->group(['prefix' => '/users', 'namespace' => 'Users'], function() use ($
     $router->get('/{User}', ['as' => 'api.users.search', 'uses' => 'FindController']);
 
     $router->post('/consumers', ['as', 'api.users.consumers.create', 'uses' => 'Consumers\CreateController']);
-//    $router->post('/users/sellers', ['as', 'api.users.sellers.create', 'uses' => 'Seller/CreateController']);
+    $router->post('/sellers', ['as', 'api.users.sellers.create', 'uses' => 'Sellers\CreateController']);
 });

@@ -10,7 +10,7 @@ use Illuminate\Http\Resources\Json\ResourceCollection;
  *
  * @package App\Http\Resources
  */
-class UserCollection extends ResourceCollection
+class ConsumerCollection extends ResourceCollection
 {
     /**
      * Transform the resource collection into an array.

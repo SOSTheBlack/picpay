@@ -13,6 +13,13 @@ use Illuminate\Database\Eloquent\Model;
 interface RepositoryInterface
 {
     /**
+     * Get the fillable attributes for the model.
+     *
+     * @return array
+     */
+    public function getFillable(): array;
+
+    /**
      * Retrieve all data of repository
      *
      * @param array $columns

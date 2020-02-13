@@ -61,6 +61,16 @@ abstract class BaseRepositoryEloquent implements RepositoryInterface
     }
 
     /**
+     * Get the fillable attributes for the model.
+     *
+     * @return array
+     */
+    public function getFillable(): array
+    {
+        return $this->model->getFillable();
+    }
+
+    /**
      * @throws RepositoryException
      */
     public function resetModel()
